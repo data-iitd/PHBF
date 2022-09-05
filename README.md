@@ -20,7 +20,7 @@ hpbf = HPBF(
             sample_factor=sample_factor,
         )
 
-x_train, _, x_test, _ = load_mnist() # The sets X and Y of paper. Any numpy array of dimensions n$\times$d
+x_train, _, x_test, _ = load_mnist() # The sets X and Y of paper. Any numpy array of shape (n, d)
 
 hpbf.initialize(x_train, x_test) # select the vectors
 hpbf.bulk_add(x_train) # compute hashes and populate the filter
